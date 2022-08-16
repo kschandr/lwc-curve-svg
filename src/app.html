@@ -1,0 +1,61 @@
+<template>
+	<div class="app slds-p-around_x-large"> CSS code, and preview the output in the interactive code editor
+
+		<!-- Using an if statement -->
+		<template if:true={showFeatures}>
+
+			<!-- simple curve -->
+			<svg viewBox="0 0 10 10" height="100" width="100">
+				<path d="M2,5 C2,0,5, 0, 7, 5"></path>
+			</svg>
+
+			<!-- S curve -->
+			<svg viewBox="0 0 10 10" height="100" width="100">
+				<path d="M2,3
+				       C2,2, 5,0, 5, 5
+							 S8,8, 9, 4"></path>
+			</svg>
+
+			<svg viewBox="0 0 10 10" height="100" width="100">
+				<line d="M2,3
+				       C2,2, 5,0, 5, 5
+							 S9,8, 9, 4"></line>
+			</svg>
+
+
+			<!--
+				how to render lines from JS?
+				1. draw curves [done]
+				2. draw line [done]
+				3. draw line on click
+				4. draw line on second click
+				5. draw sockets
+				6. draw line on socket click
+				7. draw line on second socket click
+
+
+				Delete
+				1. Delete line on click
+				2. 
+			-->
+			<!-- test for click -->
+
+		</template>
+
+		<div class="container" id="container">
+			<div class="input child" id="input1">
+				input1
+				<lightning-icon class="socket-input" onclick={inputHandler} icon-name="utility:choice" size="x-small">
+				</lightning-icon>
+			</div>
+
+			<div class="output child" id="output1">
+				output1
+				<lightning-icon class="socket-output" onclick={outputHandler} icon-name="utility:choice" size="x-small">
+				</lightning-icon>
+			</div>
+		</div>
+
+
+	</div>
+</template>
